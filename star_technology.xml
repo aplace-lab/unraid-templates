@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>star_technology</Name>
+  <Repository>itzg/minecraft-server:latest</Repository>
+  <Registry>https://hub.docker.com/r/itzg/minecraft-server</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/114242-support-minecraft-server/</Support>
+  <Project/>
+  <Overview>Full Docs: https://github.com/itzg/docker-minecraft-server/blob/master/README.md&#xD;
+Version (Tag Name): We're talking about Java here *&#xD;
+Latest: Java16; java8: Java 8; java-openj9: OpenJava9 *&#xD;
+Parameters&#xD;
+TYPE = vanilla, forge, spigot, bukkit, etc... &#xD;
+MOTD = Message of the Day&#xD;
+DIFFICULTY = Valid values are: peaceful, easy, normal, and hard&#xD;
+OPS = By default, the players in OPS are added to the final ops.json file by the Minecraft server&#xD;
+SEED = If you want to create the Minecraft level with a specific seed, use SEED&#xD;
+MODE = creative, survival, adventure, spectator&#xD;
+MEMORY = "1G" by default, can be used to adjust both initial (Xms) and max (Xmx) memory heap settings of the JVM&#xD;
+LEVEL_TYPE = default, flat, largebiomes, amplified, customized&#xD;
+When using Flat or customized, you'll also need GENERATOR_SETTINGS *&#xD;
+RESOURCE_PACK and RESOURCE_PACK_SHA1&#xD;
+* (Check the docs!)</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/tquizzle/Docker-xml/master/docker-minecraft-server.xml</TemplateURL>
+  <Icon>https://media.forgecdn.net/avatars/thumbnails/890/653/256/256/638331428476225543.jpeg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <Requires/>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Your Minecraft data directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/docker/minecraft_star_technology/data</Config>
+  <Config Name="Type" Target="TYPE" Default="vanilla" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">CURSEFORGE</Config>
+  <Config Name="MOTD" Target="MOTD" Default="My Unraid Minecraft Server" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Star Technology</Config>
+  <Config Name="OPS" Target="OPS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Seed" Target="SEED" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Mode" Target="MODE" Default="survival" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">survival</Config>
+  <Config Name="Memory" Target="MEMORY" Default="1G" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">8G</Config>
+  <Config Name="Minecraft Version" Target="VERSION" Default="1.17.1" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1.20.1</Config>
+  <Config Name="Port" Target="25565" Default="25565" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">25565</Config>
+  <Config Name="EULA" Target="EULA" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Modpacks" Target="/modpacks" Default="/mnt/cache/docker/minecraft_star_technology" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/docker/minecraft_star_technology/modpacks</Config>
+  <Config Name="Modpack File" Target="CF_SERVER_MOD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">/modpacks/StarT-1.20.1-Delta-Hotfix-4-Server-Files.zip</Config>
+</Container>
