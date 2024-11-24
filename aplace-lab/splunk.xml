@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>splunk</Name>
+  <Repository>splunk/splunk</Repository>
+  <Registry>https://hub.docker.com/r/splunk/splunk</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://splunk.github.io/docker-splunk/</Support>
+  <Project>https://splunk.github.io/docker-splunk/</Project>
+  <Overview/>
+  <Category>Tools:Utilities Network:Management</Category>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/aplace-lab/unraid-templates/master/aplace-lab/splunk.xml</TemplateURL>
+  <Icon>https://secure.gravatar.com/avatar/c4cadc82a16e67018f57f1fc2547caa4.jpg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <Requires/>
+  <Config Name="Web" Target="8000" Default="8000" Mode="tcp" Description="HTTP Web UI" Type="Port" Display="always" Required="true" Mask="false">8087</Config>
+  <Config Name="Appdata" Target="/opt/splunk/etc" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/docker/splunk/etc</Config>
+  <Config Name="Data" Target="/opt/splunk/var/lib/splunk" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/docker/splunk/data</Config>
+  <Config Name="Config File" Target="/tmp/defaults/default.yml" Default="./default.yml" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/docker/splunk/default.yml</Config>
+  <Config Name="Splunk start args" Target="SPLUNK_START_ARGS" Default="--accept-license --no-prompt" Mode="" Description="Arguments to start Splunk with. " Type="Variable" Display="advanced" Required="true" Mask="false">--accept-license --no-prompt</Config>
+  <Config Name="Password" Target="SPLUNK_PASSWORD" Default="changeme2019" Mode="" Description="Splunk Web UI admin password." Type="Variable" Display="advanced" Required="true" Mask="true">changeme2019</Config>
+  <Config Name="Management" Target="8089" Default="8089" Mode="tcp" Description="HTTPS API" Type="Port" Display="advanced" Required="false" Mask="false">8089</Config>
+  <Config Name="Data Ingest" Target="9997" Default="9997" Mode="tcp" Description="SplunkTCP input" Type="Port" Display="advanced" Required="false" Mask="false">9997</Config>
+</Container>
