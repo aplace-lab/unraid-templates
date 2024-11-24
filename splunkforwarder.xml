@@ -20,4 +20,5 @@
   <Config Name="Appdata" Target="/opt/splunkforwarder/etc" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/docker/splunkforwarder/etc</Config>
   <Config Name="Splunk start args" Target="SPLUNK_START_ARGS" Default="--accept-license --no-prompt" Mode="" Description="Arguments to start Splunk with. " Type="Variable" Display="advanced" Required="true" Mask="false">--accept-license --no-prompt</Config>
   <Config Name="Deployment Server" Target="SPLUNK_DEPLOYMENT_SERVER" Default="" Mode="" Description="Deployment Server URL " Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Password" Target="SPLUNK_PASSWORD" Default="changeme2019" Mode="" Description="Splunk Web UI admin password." Type="Variable" Display="advanced" Required="true" Mask="true"></Config>
 </Container>
