@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>splunkforwarder</Name>
+  <Repository>splunk/universalforwarder</Repository>
+  <Registry>https://hub.docker.com/r/splunk/universalforwarder</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://splunk.github.io/docker-splunk/</Support>
+  <Project>https://splunk.github.io/docker-splunk/</Project>
+  <Overview/>
+  <Category>Tools:Utilities Network:Management</Category>
+  <TemplateURL>https://raw.githubusercontent.com/aplace-lab/unraid-templates/master/aplace-lab/splunkforwarder.xml</TemplateURL>
+  <Icon>https://secure.gravatar.com/avatar/c4cadc82a16e67018f57f1fc2547caa4.jpg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <Requires/>
+  <Config Name="Appdata" Target="/opt/splunkforwarder/etc" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/docker/splunk/etc</Config>
+  <Config Name="Splunk start args" Target="SPLUNK_START_ARGS" Default="--accept-license --no-prompt" Mode="" Description="Arguments to start Splunk with. " Type="Variable" Display="advanced" Required="true" Mask="false">--accept-license --no-prompt</Config>
+  <Config Name="Deployment Server" Target="SPLUNK_DEPLOYMENT_SERVER" Default="" Mode="" Description="Deployment Server URL " Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+</Container>
